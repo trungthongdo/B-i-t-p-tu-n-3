@@ -13,6 +13,7 @@ const initialState: ProductsState = {
   status: "idle",
   error: null,
 };
+
 export const fetchProducts = createAsyncThunk<Product[], void>(
   "products/fetchAll",
   async () => {

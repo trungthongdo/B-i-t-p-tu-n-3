@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { addItem } from "../cart/cartSlice";
+import FavoriteButton from "../favorites/FavoriteButton";
 import type { Product } from "../../types";
 
 function ProductList() {
@@ -21,6 +22,7 @@ function ProductList() {
       <div className="product-grid">
         {items.map((product: Product) => (
           <article key={product.id} className="product-card">
+            <FavoriteButton product={product} />
             <div className="product-card__image">{product.image}</div>
             <div className="product-card__body">
               <span className="product-card__category">{product.category}</span>

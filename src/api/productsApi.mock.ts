@@ -9,6 +9,7 @@ const MOCK_PRODUCTS: Product[] = [
   { id: "p6", name: "Webcam Logitech C920", price: 1250000, image: "📷", category: "Phụ kiện" },
 ];
 
+
 export function fetchProductsFromServer(): Promise<Product[]> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

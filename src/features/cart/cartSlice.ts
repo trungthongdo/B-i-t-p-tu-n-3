@@ -9,6 +9,7 @@ interface CartState {
 const initialState: CartState = {
   items: [],
 };
+
 interface UpdateQuantityPayload {
   id: string;
   quantity: number;
@@ -30,6 +31,7 @@ const cartSlice = createSlice({
     removeItem(state, action: PayloadAction<string>) {
       state.items = state.items.filter((item) => item.id !== action.payload);
     },
+
     updateQuantity(state, action: PayloadAction<UpdateQuantityPayload>) {
       const { id, quantity } = action.payload;
       if (quantity <= 0) {
@@ -39,6 +41,7 @@ const cartSlice = createSlice({
       const item = state.items.find((i) => i.id === id);
       if (item) item.quantity = quantity;
     },
+
     clearCart(state) {
       state.items = [];
     },

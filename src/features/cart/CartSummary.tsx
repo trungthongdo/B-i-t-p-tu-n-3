@@ -38,6 +38,7 @@ function CartSummary() {
               <span>{item.price.toLocaleString("vi-VN")}đ / sản phẩm</span>
             </div>
 
+            {/* Cập nhật số lượng: giảm / tăng */}
             <div className="qty-control">
               <button
                 onClick={() =>
